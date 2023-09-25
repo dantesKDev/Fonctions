@@ -1,10 +1,10 @@
 <?php
 
-$chD = 17;
-$chF = 19; 
-$str = "Adios Amigos Mi Amor";
+// $chD = 17;
+// $chF = 19; 
+// $str = "Adios Amigos Mi Amor";
 
-echo sousChaine($str, $chD, $chF);
+// echo sousChaine($str, $chD, $chF);
 
 function sousChaine($str, $chD, $chF){
     $sch = "";
