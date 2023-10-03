@@ -1,7 +1,7 @@
 <?php
 
 
-$str1 = "Bonjour monde! ";
+$str1 = "Bonjour mande!";
 $str2 = "Bonjour monde!";
 
 $ch1 = [];
@@ -14,32 +14,28 @@ for($y=0; $y < mb_strlen($str2); $y++){
     $ch2[] .= $str2[$y];
 }
 
-$nbr = 0;
-if(count($ch1) >= count($ch2)){
+
+$dif = [];
+if(count($ch1) == count($ch2)){
     for ($i=0; $i < count($ch1); $i++) { 
         # code...
         if($ch1[$i] != $ch2[$i]){
-            $nbr++;
-            continue;
+            $dif[] .= $ch1[$i];
         }
     }
 }else {
     # code...
     for ($x=0; $x < count($ch2); $x++) {
         # code...
-        if ($ch2 != $ch1) {
-            $nbr++;
+        if ($ch2[$x] != $ch1[$x]) {
         }
     }
 }
 
-($nbr != 0) ? (print_r("Chaine differentes")) : print_r("Chaine identique");
-// if($nbr){
-//     echo "Chaine differentes";
-// }else{
-//     echo "Chaine identique";
-// }
-
-
+(count($dif) != 0) ? (print_r("Chaine differentes")) : print_r("Chaine identique");
+echo "<br>Voir les diff ".count($dif).": <br>";
+for($a=0; $a < count($dif); $a++){
+    echo "$dif[$a]";
+}
 
 ?>
