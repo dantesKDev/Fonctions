@@ -1,10 +1,8 @@
 <?php
 
-echo verificationPassword('ResetTest123');
+function verifPass($str){
 
-function verificationPassword($str){
     $strTab = str_split($str);
-    // var_dump($strTab);
     $nbrN = 0;
     $nbrMaj = 0;
     $nbrMin = 0;
@@ -19,9 +17,6 @@ function verificationPassword($str){
             $nbrN++;
         }
     }
-    // echo $nbrN;
-    // echo $nbrMaj;
-    // echo $nbrMin;
     if(count($strTab) >= 8 && $nbrN >= 1 && $nbrMaj >= 1 && $nbrMin >= 1){
         return true;
     }else{

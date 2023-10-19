@@ -1,6 +1,6 @@
 <?php
 
-function scrapp(){
+function scrapp($content,$query){
     $html = file_get_contents("");
 
     $dom = new DOMDocument();
